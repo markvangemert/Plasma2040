@@ -1,0 +1,56 @@
+import plasma
+from plasma import plasma_stick
+
+import time
+
+NUM_LEDS = 50
+
+led_strip = plasma.WS2812(
+    NUM_LEDS, 0, 0, plasma_stick.DAT, rgbw=False, color_order=plasma.COLOR_ORDER_GRB
+)
+
+led_strip.start()
+
+# de ledstrip bestaat uit RGB-leds die rood, groen en blauw licht geven 
+# kleur als combinatie van rood, groen en blauw, ieder met een waarde tussen 0 en 255
+rood       = 255,   0,   0   #   0
+oranje     = 255, 127,   0   #  30
+geel       = 255, 255,   0   #  60
+geelgroen  = 127, 255,   0   #  90
+groen      =   0, 255,   0   # 120
+lentegroen =   0, 255, 127   # 150
+cyaan      =   0, 255, 255   # 180
+azuur      =   0, 127, 255   # 210
+blauw      =   0,   0, 255   # 240
+violet     = 127,   0, 255   # 270
+magenta    = 255,   0, 255   # 300
+roze       = 255,   0, 127   # 330
+
+# wanneer je kleuren in elkaar wilt laten overlopen is HSV handiger dan RGB
+# bij HSV geef je de tint aan van 0 tm 360 graden (zie "kleuren cirkel" op internet)
+# de waarden hiervoor staan als commentaar achter de kleuren hierboven
+# HSV staat in het Nederlands voor Tint, Verzadiging en Helderheid.
+# We wijzigen alleen Tint, voor Verzadiging en Helderheid gebruiken we 1 (=100%)  
+
+# range(360) geeft een lijst van 0 tn 359
+# we delen kleur door 360 om een waarde tussen 0 en 1 te krijgen
+# 0 staat voor de eerste LED
+for kleur in range(360): 
+    led_strip.set_hsv(0, kleur/360, 1, 1) 
+    time.sleep(.01)
+
+# je kunt de kleurverandering laten rondgaan door steeds een volgende led aan te zetten
+
+# a = b % c berekent de 'rest' van b / c
+# 9 % 10 geeft 9, 10 % 10 geeft 0, 11 % 10 geeft 1
+# als je 10 leds hebt begin je hiermee na 10 weer bij 0 (de eerste led)
+
+for i in range(360):
+    kleur = i / 360
+    led = i % NUM_LEDS
+    led_strip.set_hsv(led, kleur, 1, 1)
+    time.sleep(.01)
+    
+# alle led's weer uitzetten
+for j in range(NUM_LEDS):
+    led_strip.set_rgb(j, 0, 0, 0)
