@@ -1,0 +1,87 @@
+import plasma
+from plasma import plasma_stick
+
+import time
+
+# dit zij constanten. de waardes die je hier zet worden in de rest van de code gebruikt
+NUM_LEDS = 50 # het aantal leds in de string
+PAUZE = .1
+
+led_strip = plasma.WS2812(
+    NUM_LEDS, 0, 0, plasma_stick.DAT, rgbw=False, color_order=plasma.COLOR_ORDER_GRB
+)
+
+led_strip.start()
+
+# de ledstrip bestaat uit RGB-leds die rood, groen en blauw licht geven 
+# elke kleur is een combinatie van rood, groen en blauw, ieder met een waarde tussen 0 en 255
+rood       = 255,   0,   0   #   0
+oranje     = 255, 127,   0   #  30
+geel       = 255, 255,   0   #  60
+geelgroen  = 127, 255,   0   #  90
+groen      =   0, 255,   0   # 120
+lentegroen =   0, 255, 127   # 150
+cyaan      =   0, 255, 255   # 180
+azuur      =   0, 127, 255   # 210
+blauw      =   0,   0, 255   # 240
+violet     = 127,   0, 255   # 270
+magenta    = 255,   0, 255   # 300
+roze       = 255,   0, 127   # 330
+
+# welke led (0 tm NUM_LEDS-1)
+i = 5
+# wijzig i en color en zie wat het resultaat is ... (test de code met pf5) 
+color = cyaan
+led_strip.set_rgb(i, *color)
+
+# je kunt alle leds na elkaar aanzetten met een loop
+# de ingesprongen code wordt nu NUM_LEDS keer uitgevoerd met i van 0 tm NUM_LEDS-1
+color = rood
+for i in range(NUM_LEDS):
+    led_strip.set_rgb(i, *color)
+
+# range(NUM_LEDS) maakt een lijst aan met getallen 0 tm NUM_LEDS-1
+# type (kopieer) de volgende code in de shell om dit te zien:
+# print(list(range(NUM_LEDS)))
+
+# om dit te vertragen voeg je wat pauze toe
+# .5 is een half, hier een halve seconde
+color = blauw
+for i in range(NUM_LEDS):
+    led_strip.set_rgb(i, *color)
+    time.sleep(PAUZE)
+
+# om een lopend lichtje te maken zetten we nu iedere keer alle leds uit voordat we de volgende aan zetten
+# een loop in een loop
+color = groen
+for i in range(NUM_LEDS):
+    for j in range(NUM_LEDS):      # uitzetten
+        led_strip.set_rgb(j, 0, 0, 0)
+    led_strip.set_rgb(i, *color)
+    time.sleep(PAUZE)
+for j in range(NUM_LEDS):          # uitzetten
+    led_strip.set_rgb(j, 0, 0, 0)
+
+
+# het uitzetten doe je nu op twee plaatsen met dezelfde code
+# als die code complexer is kun je die in een functie opnemen, dat is ook begrijpelijker
+color = oranje
+def uitzetten():
+    for j in range(NUM_LEDS):
+        led_strip.set_rgb(j, 0, 0, 0)
+    
+for i in range(NUM_LEDS):
+    led_strip.set_rgb(i, *color)
+    time.sleep(PAUZE)
+    uitzetten()
+
+
+# handiger om alleen de led uit te zetten die je hebt aangezet, en dit na de pauze te doen
+color = rood
+for i in range(NUM_LEDS):
+    led_strip.set_rgb(i, *color)
+    time.sleep(PAUZE)
+    led_strip.set_rgb(i, 0, 0, 0) # uitzetten
+
+
+     
