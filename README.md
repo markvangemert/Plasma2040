@@ -4,10 +4,11 @@ Code en handleiding bij de Wireless Plasma Kit van Pimoroni
 # Dit hoef je niet te doen, de Plasma stick 2040 bevat al de nodige programmatuur
 
 kopieer een gecompileerd programma of MicroPython naar de Raspberry Pico:
-* Houd knop BOOTSEL ingedrukt en druk op RESET
+* Houd knop BOOTSEL ingedrukt en druk op RESET.
+
 In Windows Explorer verschijnt RPI-RP2
-* Sleep (kopieer) het programma naar RPI-RP2
-RPI-RP2 verdwijnt uit Windows Explorer
+* Sleep (kopieer) het programma naar RPI-RP2.
+-> RPI-RP2 verdwijnt uit Windows Explorer
 
 Micropython vind je op:
 https://micropython.org/download/rp2-pico-w/
