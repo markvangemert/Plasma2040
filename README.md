@@ -1,5 +1,6 @@
 # Plasma2040
 Code en handleiding bij de Wireless Plasma Kit van Pimoroni
+De handleiding voor de Plasma Kit (in het Engels) staat hier: https://learn.pimoroni.com/article/assembling-wireless-plasma-kit
 
 # Dit hoef je niet te doen, de Plasma stick 2040 bevat al de nodige programmatuur
 
