@@ -54,7 +54,7 @@ Je kunt code op verschillende manieren uitvoeren:
 
 ## Het LED-je op de Raspberry Pico laten knipperen:
 * Verbind de Raspberry Pico via USB met je computer en start Thonny
-* Open "Pico Blink.py" in Thonny (File - Open ...)
+* Open [Pico Blink.py](./Pico Blink.py) in Thonny (File - Open ...)
      Je kunt het programma vauit Thonny op je Raspberry Pico uitvoeren:
 * Kies "Run", dan "Run current script"
      of
