@@ -74,3 +74,12 @@ De code naar de Raspberry Pico kopieren:
 * Druk op de RESET-knop op de Raspberry Pico om het programma te starten
 
 De Raspberry Pico voert altijd maar één programma uit. Of het programma main.py dat op de Raspberry Pico staat, of een programma vanuit Thonny
+
+## Code voor de LED-string
+* Test eerst de kleuren met "Pico test RGB.py".
+     Zie commentaar in code
+* Uitleg en code met RGB-kleuren staat in "Pico LEDstring RGB.py"
+* Uitleg en code met 'lopende' kleuren staat in "Pico LEDstring HSV.py"
+
+
+* 
