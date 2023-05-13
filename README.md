@@ -7,26 +7,36 @@ kopieer een gecompileerd programma of MicroPython naar de Raspberry Pico:
 * Houd knop BOOTSEL ingedrukt en druk op RESET.
 
 In Windows Explorer verschijnt RPI-RP2
-* Sleep (kopieer) het programma naar RPI-RP2.
--> RPI-RP2 verdwijnt uit Windows Explorer
 
-Micropython vind je op:
-https://micropython.org/download/rp2-pico-w/
+* Sleep (kopieer) het programma naar RPI-RP2.
+
+RPI-RP2 verdwijnt uit Windows Explorer
+
+Micropython vind je op: https://micropython.org/download/rp2-pico-w/
 
 # Dit moet je altijd doen
 
 Voor programma's in MicroPython heb je Thonny nodig:
 Met Thonny kun je programma's schrijven, testen en van en naar je Raspberry Pico kopieren
 * Download Thonny van https://thonny.org/
-* Verbind de Raspberry Pico via USB met je computer en start Thonny
-Rechtsonder staat dan iets als: "MicroPython (Raspberry Pi Pico) COMx". Als dit niet het geval is dubbelklik dan rechtsonder en kies je Raspberry Pico
-In de onderste helft van Thonny kun je MicroPython uitvoeren op je Raspberry Pico. Op de regel met >>> kun je code uitvoeren.
-* Typ daar: print("hallo") en ENTER
+* Verbind de Raspberry Pico via USB met je computer en start Thonny.
+
+     Rechtsonder staat dan iets als: "MicroPython (Raspberry Pi Pico) COMx". Als dit niet het geval is dubbelklik dan rechtsonder en kies je Raspberry Pico
+
+     In de onderste helft van Thonny kun je MicroPython uitvoeren op je Raspberry Pico. Op de regel met >>> kun je code uitvoeren.
+* Typ daar:
+~~~
+print("hallo")
+~~~
+en ENTER
+
 Dit wordt nu door MicroPython op je Raspberry Pico uitgevoerd en in Thonny geprint
 
-Staat er al code op je Raspberry Pico?
-* Verbind de Raspberry Pico via USB met je computer en start Thonny
-* Kies "File", dan "Open...", dan: "Raspberry Pi Pico"
+Kijk of er al code staat je Raspberry Pico:
+* Verbind de Raspberry Pico via USB met je computer en start Thonny.
+     Controleer dat rechtsonder staat: "MicroPython (Raspberry Pi Pico) COMx". Zie anders herboven.
+* Kies "File", dan "Open...", dan: "Raspberry Pi Pico".
+     Als het goed is staat hier voorbeeldcode.
 De code is ook te vinden op: https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/examples/plasma_stick 
 
 Het LED-je op de Raspberry Pico laten knipperen:
