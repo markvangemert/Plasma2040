@@ -63,6 +63,7 @@ Kopieer hiervoor eerst de code van deze website (Github.com) naar je eigen compu
 * Klik op de groene knop met "<> code" en kies dan "download ZIP"
 * Zet de code in een directory ergens op je computer
 
+Dan:
 * Verbind de Raspberry Pico via USB met je computer en start Thonny
 * Open `Pico Blink.py` in Thonny (File - Open ...)
 
