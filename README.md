@@ -36,7 +36,7 @@ Dit wordt nu door MicroPython op je Raspberry Pico uitgevoerd en in Thonny gepri
 
 Kijk of er al code staat op de Raspberry Pico:
 * Verbind de Raspberry Pico via USB met je computer en start Thonny.
-     Controleer dat rechtsonder staat: "MicroPython (Raspberry Pi Pico) COMx". Zie anders herboven.
+     Controleer dat rechtsonder staat: "MicroPython (Raspberry Pi Pico) COMx". Zie anders hierboven.
 * Kies "File", dan "Open...", dan: "Raspberry Pi Pico".
      Als het goed is staat hier voorbeeldcode.
      De code is ook te vinden op: https://github.com/pimoroni/pimoroni-pico/tree/main/micropython/examples/plasma_stick 
@@ -45,20 +45,26 @@ Kijk of er al code staat op de Raspberry Pico:
 
 Je kunt code op verschillende manieren uitvoeren:
 * Op de Raspberry Pico.
-     Code in de file main.py op de Raspberry Pico wordt automatisch uitgevoerd. Als de Raspberry Pico stroom heeft.
+
+     Als de Raspberry Pico via USB van stroom voorziet voert deze de file `main.py` uit..
 * Vanuit Thonny op de Raspberry Pico.
+
      Zie voorbeelden hierna.
 * Vanuit Thonny op je Windows machine.
+
      Dubbelklik dan rechtsonder in Thonny en kies: "Local Python 3".
      Code die iets met LEDs doet wekt alleen vanaf de Raspberry Pico
 
 ## Het LED-je op de Raspberry Pico laten knipperen:
 * Verbind de Raspberry Pico via USB met je computer en start Thonny
-* Open Pico Blink.py in Thonny (File - Open ...)
+* Open `Pico Blink.py` in Thonny (File - Open ...)
+
      Je kunt het programma vauit Thonny op je Raspberry Pico uitvoeren:
 * Kies "Run", dan "Run current script"
+
      of
 * Klik op het Run-icoontje (groen met wit driehoekje)
+     
      of
 * Toets F5
      Onderin zie je dat het programma wordt uitgevoerd en eventuele informatie die vanuit het programma wordt geprint
